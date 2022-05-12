@@ -15,7 +15,7 @@ phases:
   #      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
   build:
     commands:
-      - docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.1.4-20220427
+      - docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox:4.1.4-20220427
       #      - echo Build started on `date`
       #      - echo Building the Docker image...
       - mvn compile
