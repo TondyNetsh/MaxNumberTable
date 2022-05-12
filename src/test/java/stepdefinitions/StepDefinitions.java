@@ -46,7 +46,7 @@ public class StepDefinitions {
         for(int i = 1; i <= tableSize; i++) {
             draws.add(Integer.parseInt(driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div[3]/table/tbody/tr["+i+"]/td[5]")).getText()));
         }
-
+        System.out.println(draws);
         Collections.sort(draws);
         System.out.println("The maximum number of draws in tthe table: " + draws.get(tableSize-1));
     }
