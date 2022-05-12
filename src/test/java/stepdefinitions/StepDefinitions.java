@@ -48,6 +48,6 @@ public class StepDefinitions {
         }
 
         Collections.sort(draws);
-        System.out.println(draws.get(tableSize-1));
+        System.out.println("The maximum number of draws in tthe table: " + draws.get(tableSize-1));
     }
 }
