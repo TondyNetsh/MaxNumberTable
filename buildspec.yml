@@ -17,7 +17,7 @@ phases:
     commands:
       - docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox:4.1.4-20220427
       #      - echo Build started on `date`
-      #      - echo Building the Docker image...
+      #      - echo Building the Docker image.......
       - mvn compile
   post_build:
     commands:
