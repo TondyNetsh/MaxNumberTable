@@ -5,16 +5,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class StepDefinitions {
-    public WebDriver driver;
+    ChromeOptions chromeOptions = new ChromeOptions();
+    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+    //public WebDriver driver;
+
+    public StepDefinitions() throws MalformedURLException {
+    }
+
     @Given("User opens the supersport website")
     public void user_opens_the_supersport_website() throws Throwable {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\CMDQ1\\IdeaProjects\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\CMDQ1\\IdeaProjects\\WebDrivers\\chromedriver.exe");
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
